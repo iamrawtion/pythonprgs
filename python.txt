@@ -1,0 +1,193 @@
+Python : Guido Von Rossum
+
+functional, procedural and object oriented language
+
+Major releases
+- 2000 : 2.0
+- Major ones are 2.7.X and 3.5.X
+- 3.x is not backward compatible with 2.7
+
+- HelloWorld
+- Datatypes
+- Operators
+- Containers - Lists, Tuples, String, Dictionary, Main
+- Control Flow
+- Command Line
+- File handling - config files
+- Python OOPs
+- REGEX
+- Subprocess-Multithreading
+- Modules in Python - e.g Pickle
+- Distutils/Module/Packages
+- Database handling/HTML/XML
+- List Comprehensions, Lambdas, Iterators, Generators, Decorators, MetaClasses
+-
+
+#!/usr/bin/python  -> shebang followed by path of python
+print "HelloWorld" -> builtin func and literal
+input
+
+Python is both compiled and interpreted.
+Python is platform independent. Python has PVM(Just like Java has JVM, Android has KVM -Kilobyte VM)
+
+Python after compilation generates a .pyc file. For standalone scripts, pyc is generated in ram temporarily and discarded.
+
+Compilation :
+Process of conversion of human readable code to machine understnad the code.
+- Tokenization : Break statements in tokens
+- Syntax Analysis : Check the validity format of the statement(grammar)
+- Semantic Analysis : Meaning of statment
+- Intermediate code generation : Appropriate system calls for appropriate function.
+- Code optimization : dead code analysis e.g if(1) abc; else pqr; Here pqr is dead code and optimization will remove it.
+- Target code generation
+- PVM understandable form.
+
+Python is case sensitive
+PYthon indentation is must. Follows space as an indentation blockif(1):
+    afdafhda
+    dslfjf
+print("abc")
+Block scope of any code block is not defined by "{}", only spaces must be used for this reason.
+Linting tools : pylint, pep8
+Python performs automatic garbage collection
+Data Model of python:
+Python by default follows reference model
+Value Model and Reference Model.
+Value Model:
+int a = 10
+Reference Model:
+int a =10
+int *ptr = &a
+
+Data types
+type() is a python function that tell a datatype of a var
+a='c'
+type(a)
+
+name = "sdgsdd"
+indexed 012345
+reverse-654321
+Reverse indexing is also supported in python.
+If you try to access a part not existing in the string you get this:
+>>> name[-15]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  IndexError: string index out of range
+
+Slicing of the string can also be done as follows
+>>> name[3:]
+'dgsfhsfsdgs'
+>>> name='Trinaha'
+>>>
+>>> name[1:3]
+This can also be done with reverse indexing
+>>> name[-3:-1]
+'ah'
+Lets say you want to skip odd numbered index and print others
+>>> name[::2]
+'Tiaa'
+Useful in case os filtering logs. If you are parsing logs and want to pull out specific data from the filters
+
+Write a Python script to extract webname.
+print(url)
+
+Other data types
+- String
+- LIst
+- Tuple : Same as list bt tuples are immutable which means you cannot change its value. But you can assign a different tuple to a variable.
+- Dictionaries
+- Containers
+
+Opeartors
+- Arity : Number of operators and operands taken i.e, unary,binary
+- Precendance : 5+3/2
+- Associativity : 5*3/2
+R->L : unary, ternary, combinational assingment
+All others are L->R
+
+Classes of operators:
+- Arithematic (python addition : **(exponential), //(floor division) )
+- Relational operators (only on 2.7): <>
+- Bitwise & | ^ >> << ~
+- Logical and or not
+- Membership in , not in
+- Identity is, is not
+
+Bitwise operators :
+&(AND) -Turn off bit/bits
+e.g 100 :
+|(OR) - Turn off bit/bits
+<< Left shift 00001010 << 1 = 00010100   -> IMplication of left shift is multiplication by 2's power
+>> Right shift 00001010 >> 1 = 00000101
+When zero comes in its called as logical right shift
+When one comes in Arithmetics rigth shift
+^ Toggle bit 0to1 and 1to0
+~ Compliment
+
+
+Control Flow Statements
+- Sequence Statements:
+- Selection : if-else (There is no switch case in pythoni)
+-- Selection : if - elif - else
+- iteration :
+-- enumeration controlled - for loop
+--- for <variable> in <container>
+--- else: can also be added to loop. Else executes if loop terminates because of loop termination condition. i.e when loop executes completely. else will not execute if the loop comes out of loop due to jump statements like break, return.
+-- logical controlled - while loop
+- Jump statements : break, continue, pass, return
+- Functions
+-- def <name-of-func>(<function-arguments-if-any>):
+-- statments inside function need to be indented too.
+l,m,n,o,p = foo()
+return (1,2,3,4,5)
+-- Variable number of arguments for functions
+def variablesargsadd(*args):
+   for x in args:
+      print x
+
+
+Write a program to accept 3 numbers and print the greatest and smallest.
+Write a program to accept ddmmyy  from user and check if it is valid
+
+Write a function to add 2,3,4,5 numbers
+Wrtie a functiona dd which takes 5 arguments and try out with min 5 diff combinations of function calls to understand positional and keyword arguments.
+
+if __name__ == '__main__':
+ABove is called as boiler plate. There  shoould be no free fall code in your code See p008 assignment
+
+HW:
+Write a program to accept to print sum of digits of a number.
+Write a program to accept a number from user and print the count of digit with occurs maximum number of times.
+Write a program to accept a number and check if its is armstrong number (Sum of cubes of digits is equal to original number)
+Write a program to print following pattern:
+*
+**
+***
+****
+Write a program to reverse previous order
+Write a program to
+   *
+  **
+ ***
+****
+Write a program to print:
+****
+ ***
+  **
+   *
+Write a program to print:
+   *
+  ***
+ *****
+*******
+Write a program to accept number of rows from the user and print a pattern as :
+  A
+ BAB
+CBABC
+Write a program to accept a list from user and an element and count its number of occurances.
+Write a program to implement a stack using list. (push, pop, isempty, isfull)
+Write a program to accept a list of integers from user and display max and min out of them
+Write a program to compare two lists elementwise. Sort and compare.
+Write a program to accept 2 lists and print Inverse Intersection
+Write a program to accept a  list, nested or any kind and the output needs to be a single list.
+WAP to bubble sort, selection sort and insert sort
